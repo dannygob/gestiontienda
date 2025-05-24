@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">商店管理</string>
+
+    <!-- Common -->
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="save">保存</string>
+    <string name="delete">删除</string>
+    <string name="edit">编辑</string>
+    <string name="back">返回</string>
+    <string name="add">添加</string>
+    <string name="search">搜索</string>
+    <string name="loading">加载中…</string>
+    <string name="error">错误</string>
+
+    <!-- Auth -->
+    <string name="sign_in">登录</string>
+    <string name="sign_up">注册</string>
+    <string name="sign_out">退出登录</string>
+    <string name="email">电子邮件</string>
+    <string name="password">密码</string>
+    <string name="confirm_password">确认密码</string>
+    <string name="name">姓名</string>
+    <string name="forgot_password">忘记密码？</string>
+    <string name="reset_password">重置密码</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">首页</string>
+    <string name="nav_sales">销售</string>
+    <string name="nav_inventory">库存</string>
+    <string name="nav_customers">客户</string>
+    <string name="nav_statistics">统计</string>
+    <string name="nav_settings">设置</string>
+    <string name="nav_backup">备份</string>
+
+    <!-- Home -->
+    <string name="main_actions">主要操作</string>
+    <string name="summary">概要</string>
+
+    <!-- Sales -->
+    <string name="new_sale">新销售</string>
+    <string name="payment_method">支付方式</string>
+    <string name="total">总计</string>
+    <string name="subtotal">小计</string>
+    <string name="tax">税费</string>
+    <string name="discount">折扣</string>
+    <string name="quantity">数量</string>
+    <string name="scan_barcode">扫描条码</string>
+
+    <!-- Inventory -->
+    <string name="products">产品</string>
+    <string name="new_product">新产品</string>
+    <string name="edit_product">编辑产品</string>
+    <string name="product_name">产品名称</string>
+    <string name="product_code">产品代码</string>
+    <string name="purchase_price">进货价</string>
+    <string name="sale_price">销售价</string>
+    <string name="stock">库存</string>
+    <string name="min_stock">最低库存</string>
+
+    <!-- Customers -->
+    <string name="new_customer">新客户</string>
+    <string name="edit_customer">编辑客户</string>
+    <string name="customer_name">客户姓名</string>
+    <string name="phone">电话</string>
+    <string name="address">地址</string>
+    <string name="credit_limit">信用额度</string>
+    <string name="loyalty_points">积分</string>
+
+    <!-- Settings -->
+    <string name="store_settings">商店设置</string>
+    <string name="store_name">商店名称</string>
+    <string name="store_address">商店地址</string>
+    <string name="store_phone">商店电话</string>
+    <string name="store_email">商店邮箱</string>
+    <string name="tax_rate">税率</string>
+    <string name="currency">货币</string>
+    <string name="receipt_header">小票头部</string>
+    <string name="receipt_footer">小票底部</string>
+    <string name="language_selection">语言选择</string>
+    <string name="language">语言</string>
+
+    <!-- User Management -->
+    <string name="user_management">用户管理</string>
+    <string name="new_user">新用户</string>
+    <string name="edit_user">编辑用户</string>
+    <string name="user_role">用户角色</string>
+    <string name="role_admin">管理员</string>
+    <string name="role_manager">经理</string>
+    <string name="role_cashier">收银员</string>
+    <string name="role_inventory">库存管理员</string>
+
+    <!-- Backup -->
+    <string name="backup_settings">备份设置</string>
+    <string name="cloud_backup">云备份</string>
+    <string name="local_backup">本地备份</string>
+    <string name="backup">备份</string>
+    <string name="restore">恢复</string>
+    <string name="export">导出</string>
+    <string name="import_data">导入</string>
+    <string name="last_backup">上次备份</string>
+    <string name="automatic_backup">自动备份</string>
+    <string name="backup_interval">备份间隔（小时）</string>
+    <string name="enable_auto_backup">启用自动备份</string>
+</resources> 

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">إدارة المتجر</string>
+
+    <!-- Common -->
+    <string name="ok">موافق</string>
+    <string name="cancel">إلغاء</string>
+    <string name="save">حفظ</string>
+    <string name="delete">حذف</string>
+    <string name="edit">تعديل</string>
+    <string name="back">رجوع</string>
+    <string name="add">إضافة</string>
+    <string name="search">بحث</string>
+    <string name="loading">جاري التحميل…</string>
+    <string name="error">خطأ</string>
+
+    <!-- Auth -->
+    <string name="sign_in">تسجيل الدخول</string>
+    <string name="sign_up">إنشاء حساب</string>
+    <string name="sign_out">تسجيل الخروج</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="password">كلمة المرور</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="name">الاسم</string>
+    <string name="forgot_password">نسيت كلمة المرور؟</string>
+    <string name="reset_password">إعادة تعيين كلمة المرور</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_sales">المبيعات</string>
+    <string name="nav_inventory">المخزون</string>
+    <string name="nav_customers">العملاء</string>
+    <string name="nav_statistics">الإحصائيات</string>
+    <string name="nav_settings">الإعدادات</string>
+    <string name="nav_backup">النسخ الاحتياطي</string>
+
+    <!-- Home -->
+    <string name="main_actions">الإجراءات الرئيسية</string>
+    <string name="summary">الملخص</string>
+
+    <!-- Sales -->
+    <string name="new_sale">بيع جديد</string>
+    <string name="payment_method">طريقة الدفع</string>
+    <string name="total">المجموع</string>
+    <string name="subtotal">المجموع الفرعي</string>
+    <string name="tax">الضريبة</string>
+    <string name="discount">الخصم</string>
+    <string name="quantity">الكمية</string>
+    <string name="scan_barcode">مسح الباركود</string>
+
+    <!-- Inventory -->
+    <string name="products">المنتجات</string>
+    <string name="new_product">منتج جديد</string>
+    <string name="edit_product">تعديل المنتج</string>
+    <string name="product_name">اسم المنتج</string>
+    <string name="product_code">رمز المنتج</string>
+    <string name="purchase_price">سعر الشراء</string>
+    <string name="sale_price">سعر البيع</string>
+    <string name="stock">المخزون</string>
+    <string name="min_stock">الحد الأدنى للمخزون</string>
+
+    <!-- Customers -->
+    <string name="new_customer">عميل جديد</string>
+    <string name="edit_customer">تعديل العميل</string>
+    <string name="customer_name">اسم العميل</string>
+    <string name="phone">الهاتف</string>
+    <string name="address">العنوان</string>
+    <string name="credit_limit">حد الائتمان</string>
+    <string name="loyalty_points">نقاط الولاء</string>
+
+    <!-- Settings -->
+    <string name="store_settings">إعدادات المتجر</string>
+    <string name="store_name">اسم المتجر</string>
+    <string name="store_address">عنوان المتجر</string>
+    <string name="store_phone">هاتف المتجر</string>
+    <string name="store_email">بريد المتجر</string>
+    <string name="tax_rate">نسبة الضريبة</string>
+    <string name="currency">العملة</string>
+    <string name="receipt_header">رأس الإيصال</string>
+    <string name="receipt_footer">تذييل الإيصال</string>
+    <string name="language_selection">اختيار اللغة</string>
+    <string name="language">اللغة</string>
+
+    <!-- User Management -->
+    <string name="user_management">إدارة المستخدمين</string>
+    <string name="new_user">مستخدم جديد</string>
+    <string name="edit_user">تعديل المستخدم</string>
+    <string name="user_role">دور المستخدم</string>
+    <string name="role_admin">مدير النظام</string>
+    <string name="role_manager">مدير</string>
+    <string name="role_cashier">أمين الصندوق</string>
+    <string name="role_inventory">مسؤول المخزون</string>
+
+    <!-- Backup -->
+    <string name="backup_settings">إعدادات النسخ الاحتياطي</string>
+    <string name="cloud_backup">نسخ احتياطي سحابي</string>
+    <string name="local_backup">نسخ احتياطي محلي</string>
+    <string name="backup">نسخ احتياطي</string>
+    <string name="restore">استعادة</string>
+    <string name="export">تصدير</string>
+    <string name="import_data">استيراد</string>
+    <string name="last_backup">آخر نسخ احتياطي</string>
+    <string name="automatic_backup">نسخ احتياطي تلقائي</string>
+    <string name="backup_interval">فترة النسخ الاحتياطي (ساعات)</string>
+    <string name="enable_auto_backup">تفعيل النسخ الاحتياطي التلقائي</string>
+</resources> 

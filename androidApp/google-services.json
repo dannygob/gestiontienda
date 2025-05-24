@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "833129197728",
+    "project_id": "gestiontienda-c4ce4",
+    "storage_bucket": "gestiontienda-c4ce4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:833129197728:android:b0f6a48f3ce264b05859c5",
+        "android_client_info": {
+          "package_name": "com.gestiontienda.android"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkrHdgQyk4XK3Y69BBxF6p4YHhiKPeC98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+} 

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gestión Tienda</string>
+
+    <!-- Common -->
+    <string name="ok">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="save">Guardar</string>
+    <string name="delete">Eliminar</string>
+    <string name="edit">Editar</string>
+    <string name="back">Volver</string>
+    <string name="add">Agregar</string>
+    <string name="search">Buscar</string>
+    <string name="loading">Cargando…</string>
+    <string name="error">Error</string>
+
+    <!-- Auth -->
+    <string name="sign_in">Iniciar Sesión</string>
+    <string name="sign_up">Registrarse</string>
+    <string name="sign_out">Cerrar Sesión</string>
+    <string name="email">Correo Electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="confirm_password">Confirmar Contraseña</string>
+    <string name="name">Nombre</string>
+    <string name="forgot_password">¿Olvidaste tu Contraseña?</string>
+    <string name="reset_password">Restablecer Contraseña</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Inicio</string>
+    <string name="nav_sales">Ventas</string>
+    <string name="nav_inventory">Inventario</string>
+    <string name="nav_customers">Clientes</string>
+    <string name="nav_statistics">Estadísticas</string>
+    <string name="nav_settings">Ajustes</string>
+    <string name="nav_backup">Respaldos</string>
+
+    <!-- Home -->
+    <string name="main_actions">Acciones Principales</string>
+    <string name="summary">Resumen</string>
+
+    <!-- Sales -->
+    <string name="new_sale">Nueva Venta</string>
+    <string name="payment_method">Método de Pago</string>
+    <string name="total">Total</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="tax">Impuesto</string>
+    <string name="discount">Descuento</string>
+    <string name="quantity">Cantidad</string>
+    <string name="scan_barcode">Escanear Código</string>
+
+    <!-- Inventory -->
+    <string name="products">Productos</string>
+    <string name="new_product">Nuevo Producto</string>
+    <string name="edit_product">Editar Producto</string>
+    <string name="product_name">Nombre del Producto</string>
+    <string name="product_code">Código del Producto</string>
+    <string name="purchase_price">Precio de Compra</string>
+    <string name="sale_price">Precio de Venta</string>
+    <string name="stock">Existencias</string>
+    <string name="min_stock">Stock Mínimo</string>
+
+    <!-- Customers -->
+    <string name="new_customer">Nuevo Cliente</string>
+    <string name="edit_customer">Editar Cliente</string>
+    <string name="customer_name">Nombre del Cliente</string>
+    <string name="phone">Teléfono</string>
+    <string name="address">Dirección</string>
+    <string name="credit_limit">Límite de Crédito</string>
+    <string name="loyalty_points">Puntos de Fidelidad</string>
+
+    <!-- Settings -->
+    <string name="store_settings">Configuración de la Tienda</string>
+    <string name="store_name">Nombre de la Tienda</string>
+    <string name="store_address">Dirección de la Tienda</string>
+    <string name="store_phone">Teléfono de la Tienda</string>
+    <string name="store_email">Correo de la Tienda</string>
+    <string name="tax_rate">Tasa de Impuesto</string>
+    <string name="currency">Moneda</string>
+    <string name="receipt_header">Encabezado del Recibo</string>
+    <string name="receipt_footer">Pie del Recibo</string>
+    <string name="language_selection">Selección de Idioma</string>
+    <string name="language">Idioma</string>
+
+    <!-- User Management -->
+    <string name="user_management">Gestión de Usuarios</string>
+    <string name="new_user">Nuevo Usuario</string>
+    <string name="edit_user">Editar Usuario</string>
+    <string name="user_role">Rol de Usuario</string>
+    <string name="role_admin">Administrador</string>
+    <string name="role_manager">Gerente</string>
+    <string name="role_cashier">Cajero</string>
+    <string name="role_inventory">Inventario</string>
+
+    <!-- Backup -->
+    <string name="backup_settings">Configuración de Respaldos</string>
+    <string name="cloud_backup">Respaldo en la Nube</string>
+    <string name="local_backup">Respaldo Local</string>
+    <string name="backup">Respaldar</string>
+    <string name="restore">Restaurar</string>
+    <string name="export">Exportar</string>
+    <string name="import_data">Importar</string>
+    <string name="last_backup">Último Respaldo</string>
+    <string name="automatic_backup">Respaldo Automático</string>
+    <string name="backup_interval">Intervalo de Respaldo (horas)</string>
+    <string name="enable_auto_backup">Habilitar Respaldo Automático</string>
+</resources> 

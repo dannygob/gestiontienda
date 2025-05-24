@@ -1,0 +1,276 @@
+CREATE TABLE Product (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    code TEXT NOT NULL UNIQUE,
+    purchase_price REAL NOT NULL,
+    sale_price REAL NOT NULL,
+    stock INTEGER NOT NULL DEFAULT 0,
+    min_stock INTEGER NOT NULL DEFAULT 0,
+    created_at INTEGER NOT NULL,
+    updated_at INTEGER NOT NULL
+);
+
+CREATE TABLE Proveedores (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT NOT NULL,
+    direccion TEXT,
+    telefono TEXT,
+    email TEXT,
+    rfc TEXT,
+    created_at INTEGER NOT NULL,
+    updated_at INTEGER NOT NULL
+);
+
+CREATE TABLE Clientes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT NOT NULL,
+    direccion TEXT,
+    telefono TEXT,
+    email TEXT,
+    rfc TEXT,
+    created_at INTEGER NOT NULL,
+    updated_at INTEGER NOT NULL
+);
+
+CREATE TABLE Personal (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT NOT NULL,
+    cargo TEXT NOT NULL,
+    telefono TEXT,
+    email TEXT,
+    fecha_ingreso INTEGER NOT NULL,
+    created_at INTEGER NOT NULL,
+    updated_at INTEGER NOT NULL
+);
+
+CREATE TABLE Ventas (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fecha INTEGER NOT NULL,
+    cliente_id INTEGER,
+    personal_id INTEGER,
+    total REAL NOT NULL,
+    created_at INTEGER NOT NULL,
+    updated_at INTEGER NOT NULL,
+    FOREIGN KEY (cliente_id) REFERENCES Clientes(id),
+    FOREIGN KEY (personal_id) REFERENCES Personal(id)
+);
+
+CREATE TABLE DetalleVenta (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    venta_id INTEGER NOT NULL,
+    producto_id INTEGER NOT NULL,
+    cantidad INTEGER NOT NULL,
+    precio_unitario REAL NOT NULL,
+    subtotal REAL NOT NULL,
+    created_at INTEGER NOT NULL,
+    updated_at INTEGER NOT NULL,
+    FOREIGN KEY (venta_id) REFERENCES Ventas(id),
+    FOREIGN KEY (producto_id) REFERENCES Product(id)
+);
+
+CREATE TABLE Compras (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fecha INTEGER NOT NULL,
+    proveedor_id INTEGER,
+    personal_id INTEGER,
+    total REAL NOT NULL,
+    created_at INTEGER NOT NULL,
+    updated_at INTEGER NOT NULL,
+    FOREIGN KEY (proveedor_id) REFERENCES Proveedores(id),
+    FOREIGN KEY (personal_id) REFERENCES Personal(id)
+);
+
+CREATE TABLE DetalleCompra (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    compra_id INTEGER NOT NULL,
+    producto_id INTEGER NOT NULL,
+    cantidad INTEGER NOT NULL,
+    precio_unitario REAL NOT NULL,
+    subtotal REAL NOT NULL,
+    created_at INTEGER NOT NULL,
+    updated_at INTEGER NOT NULL,
+    FOREIGN KEY (compra_id) REFERENCES Compras(id),
+    FOREIGN KEY (producto_id) REFERENCES Product(id)
+);
+
+-- Product Queries
+getProductById:
+SELECT *
+FROM Product
+WHERE id = ?;
+
+getProductByCode:
+SELECT *
+FROM Product
+WHERE code = ?;
+
+getAllProducts:
+SELECT *
+FROM Product
+ORDER BY name;
+
+insertProduct:
+INSERT INTO Product(name, code, purchase_price, sale_price, stock, min_stock, created_at, updated_at)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?);
+
+updateProduct:
+UPDATE Product
+SET name = ?,
+    code = ?,
+    purchase_price = ?,
+    sale_price = ?,
+    stock = ?,
+    min_stock = ?,
+    updated_at = ?
+WHERE id = ?;
+
+deleteProduct:
+DELETE FROM Product
+WHERE id = ?;
+
+updateProductStock:
+UPDATE Product
+SET stock = stock + ?,
+    updated_at = ?
+WHERE id = ?;
+
+getLowStockProducts:
+SELECT *
+FROM Product
+WHERE stock <= min_stock
+ORDER BY stock ASC;
+
+-- Proveedores Queries
+getAllProveedores:
+SELECT * FROM Proveedores
+ORDER BY nombre;
+
+getProveedorById:
+SELECT * FROM Proveedores
+WHERE id = ?;
+
+insertProveedor:
+INSERT INTO Proveedores(nombre, direccion, telefono, email, rfc, created_at, updated_at)
+VALUES (?, ?, ?, ?, ?, ?, ?);
+
+updateProveedor:
+UPDATE Proveedores
+SET nombre = ?,
+    direccion = ?,
+    telefono = ?,
+    email = ?,
+    rfc = ?,
+    updated_at = ?
+WHERE id = ?;
+
+deleteProveedor:
+DELETE FROM Proveedores
+WHERE id = ?;
+
+-- Clientes Queries
+getAllClientes:
+SELECT * FROM Clientes
+ORDER BY nombre;
+
+getClienteById:
+SELECT * FROM Clientes
+WHERE id = ?;
+
+insertCliente:
+INSERT INTO Clientes(nombre, direccion, telefono, email, rfc, created_at, updated_at)
+VALUES (?, ?, ?, ?, ?, ?, ?);
+
+updateCliente:
+UPDATE Clientes
+SET nombre = ?,
+    direccion = ?,
+    telefono = ?,
+    email = ?,
+    rfc = ?,
+    updated_at = ?
+WHERE id = ?;
+
+deleteCliente:
+DELETE FROM Clientes
+WHERE id = ?;
+
+-- Personal Queries
+getAllPersonal:
+SELECT * FROM Personal
+ORDER BY nombre;
+
+getPersonalById:
+SELECT * FROM Personal
+WHERE id = ?;
+
+insertPersonal:
+INSERT INTO Personal(nombre, cargo, telefono, email, fecha_ingreso, created_at, updated_at)
+VALUES (?, ?, ?, ?, ?, ?, ?);
+
+updatePersonal:
+UPDATE Personal
+SET nombre = ?,
+    cargo = ?,
+    telefono = ?,
+    email = ?,
+    fecha_ingreso = ?,
+    updated_at = ?
+WHERE id = ?;
+
+deletePersonal:
+DELETE FROM Personal
+WHERE id = ?;
+
+-- Ventas Queries
+getAllVentas:
+SELECT * FROM Ventas
+ORDER BY fecha DESC;
+
+getVentaById:
+SELECT * FROM Ventas
+WHERE id = ?;
+
+getVentasByDateRange:
+SELECT * FROM Ventas
+WHERE fecha BETWEEN ? AND ?
+ORDER BY fecha DESC;
+
+insertVenta:
+INSERT INTO Ventas(fecha, cliente_id, personal_id, total, created_at, updated_at)
+VALUES (?, ?, ?, ?, ?, ?);
+
+-- DetalleVenta Queries
+getDetallesByVentaId:
+SELECT * FROM DetalleVenta
+WHERE venta_id = ?;
+
+insertDetalleVenta:
+INSERT INTO DetalleVenta(venta_id, producto_id, cantidad, precio_unitario, subtotal, created_at, updated_at)
+VALUES (?, ?, ?, ?, ?, ?, ?);
+
+-- Compras Queries
+getAllCompras:
+SELECT * FROM Compras
+ORDER BY fecha DESC;
+
+getCompraById:
+SELECT * FROM Compras
+WHERE id = ?;
+
+getComprasByDateRange:
+SELECT * FROM Compras
+WHERE fecha BETWEEN ? AND ?
+ORDER BY fecha DESC;
+
+insertCompra:
+INSERT INTO Compras(fecha, proveedor_id, personal_id, total, created_at, updated_at)
+VALUES (?, ?, ?, ?, ?, ?);
+
+-- DetalleCompra Queries
+getDetallesByCompraId:
+SELECT * FROM DetalleCompra
+WHERE compra_id = ?;
+
+insertDetalleCompra:
+INSERT INTO DetalleCompra(compra_id, producto_id, cantidad, precio_unitario, subtotal, created_at, updated_at)
+VALUES (?, ?, ?, ?, ?, ?, ?); 
