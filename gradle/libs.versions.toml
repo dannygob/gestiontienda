@@ -47,8 +47,12 @@ desugar-jdk-libs = "2.0.4"
 
 [libraries]
 # AndroidX Core
+androidx-material3 = { module = "androidx.compose.material3:material3" }
+androidx-material3-window-size-class1 = { module = "androidx.compose.material3:material3-window-size-class" }
 androidx-ui = { module = "androidx.compose.ui:ui" }
 androidx-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
+androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 core-ktx = { module = "androidx.core:core-ktx", version.ref = "core-ktx" }
 lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle-runtime" }
 activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity-compose" }
