@@ -10,7 +10,14 @@ plugins {
 
 android {
     namespace = "com.gestiontienda.android"
-    compileSdk = 34
+    compileSdk = 35
+
+    // Enable Room auto-migrations
+    ksp {
+        arg("room.schemaLocation", "$projectDir/schemas")
+        arg("room.incremental", "true")
+        arg("room.expandProjection", "true")
+    }
 
     defaultConfig {
         applicationId = "com.gestiontienda.android"
@@ -24,12 +31,6 @@ android {
             useSupportLibrary = true
         }
 
-        // Enable Room auto-migrations
-        ksp {
-            arg("room.schemaLocation", "$projectDir/schemas")
-            arg("room.incremental", "true")
-            arg("room.expandProjection", "true")
-        }
     }
 
     buildTypes {
