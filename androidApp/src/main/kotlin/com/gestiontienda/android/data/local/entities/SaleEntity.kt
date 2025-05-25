@@ -1,23 +1,25 @@
 package com.gestiontienda.android.data.local.entities
 
-import androidx.room.*
-import java.time.LocalDateTime
+import androidx.room.Entity
+import androidx.room.ForeignKey
+import androidx.room.Index
+import androidx.room.PrimaryKey
 import java.util.Date
 
 @Entity(tableName = "sales")
 data class SaleEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
-    val customerId: Long?,
-    val total: Double,
-    val subtotal: Double,
-    val tax: Double,
-    val discount: Double,
-    val paymentMethod: String,
-    val status: String,
-    val notes: String?,
-    val createdAt: Date = Date(),
-    val updatedAt: Date = Date(),
+    val customerId: Long?, // This is nullable, but still needs a value (either a Long or null)
+    val total: Double, // Needs a value
+    val subtotal: Double, // Needs a value
+    val tax: Double, // Needs a value
+    val discount: Double, // Needs a value
+    val paymentMethod: String, // Needs a value
+    val status: String, // Needs a value
+    val notes: String?, // This is nullable and has a default value (null) if not provided
+    val createdAt: Date = Date(), // Has a default value
+    val updatedAt: Date = Date(), // Has a default value
 )
 
 @Entity(

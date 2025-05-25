@@ -1,7 +1,18 @@
 package com.gestiontienda.android.data.local.dao
 
-import androidx.room.*
-import com.gestiontienda.android.data.local.entities.*
+import androidx.room.Dao
+import androidx.room.Delete
+import androidx.room.Embedded
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import androidx.room.Transaction
+import androidx.room.Update
+import com.gestiontienda.android.data.local.entities.PeriodStatsEntity
+import com.gestiontienda.android.data.local.entities.ProductSalesStatsEntity
+import com.gestiontienda.android.data.local.entities.SaleEntity
+import com.gestiontienda.android.data.local.entities.SaleItemEntity
+import com.gestiontienda.android.data.local.entities.SaleWithItems
 import kotlinx.coroutines.flow.Flow
 import java.util.Date
 
@@ -24,6 +35,19 @@ interface SaleDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertSaleItems(items: List<SaleItemEntity>)
+
+    @Query(
+        """ 
+    SELECT 
+        SUM(s.total) as totalSales, 
+        COUNT(DISTINCT s.id) as saleCount, 
+        SUM(si.quantity) as totalItems 
+    FROM sales s 
+    LEFT JOIN sale_items si ON s.id = si.saleId 
+    WHERE s.createdAt BETWEEN :startDate AND :endDate 
+    """
+    )
+    fun getSalesStats(startDate: Date, endDate: Date): Flow<SalesSummary>
 
     @Transaction
     suspend fun insertSaleWithItems(sale: SaleEntity, items: List<SaleItemEntity>): Long {

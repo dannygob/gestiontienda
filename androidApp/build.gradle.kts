@@ -85,8 +85,8 @@ dependencies {
 
     // Compose
     implementation(platform(libs.compose.bom))
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.ui:ui-graphics")
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.ui.graphics)
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.material3:material3-window-size-class")
