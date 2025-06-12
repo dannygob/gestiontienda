@@ -28,6 +28,7 @@ sealed class Screen(val route: String) {
     }
 
     object Settings : Screen("settings")
+    object LanguageSelection : Screen("language_selection")
 }
 
 @Composable
@@ -112,7 +113,13 @@ fun NavGraph(
             SettingsScreen(
                 onNavigateBack = { navController.popBackStack() },
                 onNavigateToBackup = { navController.navigate(Screen.Backup.route) }
+// TODO: Add navigation to LanguageSelectionScreen from SettingsScreen
             )
+        }
+
+        composable(Screen.LanguageSelection.route) {
+            // TODO: Replace with actual LanguageSelectionScreen composable
+            // LanguageSelectionScreen(onNavigateBack = { navController.navigateUp() })
         }
     }
 } 

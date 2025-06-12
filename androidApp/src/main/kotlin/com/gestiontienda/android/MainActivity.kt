@@ -8,7 +8,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
-import com.gestiontienda.android.navigation.AppNavigation
+import com.gestiontienda.android.presentation.navigation.NavGraph // Updated import
 import com.gestiontienda.android.ui.theme.GestionTiendaTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     val navController = rememberNavController()
-                    AppNavigation(navController = navController)
+                    NavGraph(navController = navController) // Updated call
                 }
             }
         }

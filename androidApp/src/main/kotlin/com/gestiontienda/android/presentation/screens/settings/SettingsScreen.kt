@@ -22,6 +22,7 @@ import com.gestiontienda.android.domain.model.UserWithRole
 fun SettingsScreen(
     onNavigateBack: () -> Unit,
     onNavigateToBackup: () -> Unit,
+    onNavigateToLanguageSelection: () -> Unit, // Added this line
     viewModel: SettingsViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsState()
@@ -69,6 +70,16 @@ fun SettingsScreen(
                     modifier = Modifier.clickable { showUserManagementDialog = true }
                 )
             }
+
+            // Language Selection
+            ListItem(
+                headlineContent = { Text("Idioma") }, // TODO: Use string resources
+                supportingContent = { Text("Cambiar el idioma de la aplicación") }, // TODO: Use string resources
+                leadingContent = {
+                    Icon(Icons.Default.Language, contentDescription = null)
+                },
+                modifier = Modifier.clickable { onNavigateToLanguageSelection() }
+            )
 
             // Backup option
             ListItem(
